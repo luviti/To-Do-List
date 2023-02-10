@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<title>To Do List</title>
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="row">
+			<div style="width: 95%;margin-top: 2em;color: #808080;margin-bottom: 4em;" class="template">
+
+				<div class="ToDoList">
+					
+
+					<div class="texto text-light text-bg-warning p-3">
+					<h2>Lorem ipsum silor domor</h2>
+				</div>
+
+					<div ng-app="tarefas" ng-controller="MeuControle" class="ToDoList-input">
+						  <div  class="input-group input-group-lg">
+							  <input id="inputE" ng-model="addMe" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+							  <button id="buttonE" ng-click="addItem()" type="button" class="btn btn-success"><i class="fa-solid fa-plus"></i></button>
+							</div><!--input-group-->
+							<h3 class="text-primary">TAREFAS  :</h3>
+							<ul>
+								<li class="tarefas-check" ng-repeat="x in check track by $index">{{x}}<span ng-click="removeItem($index)"><i class="fa-solid fa-x"></i></span></li>
+							</ul>
+							<div class="clear"></div>
+					</div><!--ToDoList-input-->
+
+				</div><!--ToDoList-->
+			</div><!--template-->
+		</div><!--row-->
+	</div><!--container-->
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/function.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://kit.fontawesome.com/b5588cd383.js" crossorigin="anonymous"></script>
+<script src="js/angular.min.js"></script>
+</body>
+</html>
